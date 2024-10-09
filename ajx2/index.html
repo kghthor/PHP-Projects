@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<select id="usernameDropdown">
+    <option value="">Select a Username</option>
+</select>
+<button id="showData">Show User Data</button>
+<div id="table-container"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="ajax-script.js"></script>
+<script>
+$(document).ready(function() {
+    // Fetch usernames for the dropdown
+    $.ajax({
+        type: "GET",
+        url: "fetch-usernames.php",
+        dataType: "json",
+        success: function(data) {
+            var dropdown = $('#usernameDropdown');
+            $.each(data, function(index, item) {
+                dropdown.append($('<option>', { 
+                    value: item.user,
+                    text : item.user 
+                }));
+            });
+        }
+    });
+});
+</script>
+</body>
+</html>
