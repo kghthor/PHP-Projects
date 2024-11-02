@@ -1,5 +1,5 @@
 PHP & Ajax Project-Based Learning Repository
-Welcome!
+Welcome! 
 Hi! I'm excited to share my journey of learning PHP and Ajax through various hands-on projects. This repository is dedicated to project-based examples that demonstrate the use of PHP and Ajax in real-world applications.
 
 Project List
